@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flow testing</title>
+    <meta name="description" content="Streams 4 Lyfe">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+
+    <script>
+      var App = {};
+      (function () {
+        var path = '//localhost:8080/';
+        var scriptPath = 'flowtest.js';
+
+        App.path = path;
+        App.scriptPath = App.path + scriptPath;
+      })();
+    </script>
+  </head>
+  <body style="visibility: hidden; margin: 0px;">
+    <div id="flow-app-container">
+    </div>
+
+    <div id="devtools"></div>
+
+    <script>
+      document.write('<script src="' + App.scriptPath + '"><\/script>');
+    </script>
+  </body>
+</html>
